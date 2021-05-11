@@ -10,6 +10,7 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
+    # set_show
   end
 
   # GET /shows/new
@@ -19,6 +20,7 @@ class ShowsController < ApplicationController
 
   # GET /shows/1/edit
   def edit
+    # set_show
   end
 
   # POST /shows
@@ -40,6 +42,8 @@ class ShowsController < ApplicationController
   # PATCH/PUT /shows/1
   # PATCH/PUT /shows/1.json
   def update
+    # set_show
+
     respond_to do |format|
       if @show.update(show_params)
         format.html { redirect_to @show, notice: 'Show was successfully updated.' }
@@ -54,6 +58,8 @@ class ShowsController < ApplicationController
   # DELETE /shows/1
   # DELETE /shows/1.json
   def destroy
+    # set_show
+    
     @show.destroy
     respond_to do |format|
       format.html { redirect_to shows_url, notice: 'Show was successfully destroyed.' }

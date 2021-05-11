@@ -10,6 +10,7 @@ class ActorsController < ApplicationController
   # GET /actors/1
   # GET /actors/1.json
   def show
+    # set_actor
   end
 
   # GET /actors/new
@@ -19,6 +20,7 @@ class ActorsController < ApplicationController
 
   # GET /actors/1/edit
   def edit
+    # set_actor
   end
 
   # POST /actors
@@ -40,6 +42,8 @@ class ActorsController < ApplicationController
   # PATCH/PUT /actors/1
   # PATCH/PUT /actors/1.json
   def update
+    # set_actor
+
     respond_to do |format|
       if @actor.update(actor_params)
         format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
@@ -54,6 +58,8 @@ class ActorsController < ApplicationController
   # DELETE /actors/1
   # DELETE /actors/1.json
   def destroy
+    # set_actor
+
     @actor.destroy
     respond_to do |format|
       format.html { redirect_to actors_url, notice: 'Actor was successfully destroyed.' }

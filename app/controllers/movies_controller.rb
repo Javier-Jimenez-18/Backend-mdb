@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    # set_movie
   end
 
   # GET /movies/new
@@ -19,6 +20,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+    # set_movie
   end
 
   # POST /movies
@@ -40,6 +42,8 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1
   # PATCH/PUT /movies/1.json
   def update
+    # set_movie
+
     respond_to do |format|
       if @movie.update(movie_params)
         format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
@@ -54,6 +58,8 @@ class MoviesController < ApplicationController
   # DELETE /movies/1
   # DELETE /movies/1.json
   def destroy
+    # set_movie
+    
     @movie.destroy
     respond_to do |format|
       format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
